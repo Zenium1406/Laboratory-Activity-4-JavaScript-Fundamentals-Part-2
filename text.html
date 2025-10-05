@@ -7,9 +7,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>HILU BAI</h1>
-    <h1>hahhaha</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id magnam quisquam velit eligendi. Non tenetur repellendus rerum unde distinctio dolores omnis. Magnam repudiandae doloribus laudantium sed aliquid odit cupiditate totam.</p>
+    <div>
+            <h1>Product Inventory Information System</h1>
+       
+        <style>
+            h1 {
+                text-align: center;
+            }
+        </style>
+    </div>
+
+
     <script src="main.js"></script>
+
+    <form action="main.js" method="get">
+        <label for="name">ADD PRODUCT</label>
+        <input type="text" name="name" placeholder="ENTER PRODUCT NAME" required>
+        <input type="text" name="Quantity" placeholder="ENTER QUANTITY" required>
+        <input type="text" name="price per unit" placeholder="ENTER PRICE" required>
+        <button type="submit">Add Product</button> <br>
+
+    </form> <br>
+    
+    <div id="buttonContainer">
+        <button onclick="SortbyName()">SORT BY NAME</button>
+        <button onclick="SortbyQuantity()">SORT BY QTY</button>
+        <button onclick="FilterByStock()">LOW STOCKS</button> <br> <br>
+    </div>
+    
+
+    <input type="text" placeholder="SEARCH PRODUCT" onkeyup="SearchProduct(this.value)">
+
+    
+    <table id="productTable">
+        <thead>
+            <tr>
+                <th>Product Name</th>
+                <th>Quantity</th>
+                <th>Price per Unit</th>
+                <th>Total Price</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Product rows will be dynamically added here -->
+        </tbody>
+    </table>
+
+
+
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>
